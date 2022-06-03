@@ -4,9 +4,9 @@
  */
 import { getInjectionToken } from "@ogre-tools/injectable";
 import type { IComputedValue } from "mobx";
-import type { JsonValue } from "type-fest";
+import type { IpcValue } from "../channel/allowed-types";
 
-export interface SyncBox<TValue extends JsonValue> {
+export interface SyncBox<TValue extends IpcValue> {
   id: string;
   value: IComputedValue<TValue>;
   set: (value: TValue) => void;
